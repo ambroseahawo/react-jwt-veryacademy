@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function SignUp(){
+const Register = () =>{
   const navigate = useNavigate()
 
   const initialFormData = Object.freeze({
@@ -62,7 +62,7 @@ export default function SignUp(){
       navigate('/login')
       // console.log(res)
       // console.log(res.data)
-    })
+    }).catch(e => console.log(e.message))
   }
 
   const classes = useStyles()
@@ -141,3 +141,5 @@ export default function SignUp(){
 		</Container>
   )
 }
+
+export default Register

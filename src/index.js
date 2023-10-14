@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import App from './App';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Register from './components/Register';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
@@ -13,6 +14,7 @@ const routing = (
 			<Header />
 			<Routes>
 				<Route exact path="/" element={<App />} />
+				<Route exact path="/register" element={<Register />} />
 			</Routes>
 			<Footer />
 	  </Router>
