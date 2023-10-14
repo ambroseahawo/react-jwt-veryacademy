@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axiosInstance from "../axios";
 //MaterialUI
 import Avatar from '@material-ui/core/Avatar';
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function SignUp(){
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const initialFormData = Object.freeze({
     email: '',
@@ -59,7 +59,7 @@ export default function SignUp(){
       user_name: formData.username,
       password: formData.password
     }).then((res) =>{
-      history.push('/login')
+      navigate('/login')
       console.log(res)
       console.log(res.data)
     })

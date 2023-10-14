@@ -1,22 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-import './index.css';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import Header from './components/Header';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import './index.css';
+import * as serviceWorker from './serviceWorker';
 
 const routing = (
-	<Router>
-		<React.StrictMode>
+	<React.StrictMode>
+		<Router>
 			<Header />
-			<Switch>
-				<Route exact path="/" component={App} />
-			</Switch>
+			<Routes>
+				<Route exact path="/" element={<App />} />
+			</Routes>
 			<Footer />
-		</React.StrictMode>
-	</Router>
+	  </Router>
+	</React.StrictMode>
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
