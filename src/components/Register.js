@@ -52,7 +52,7 @@ export default function SignUp(){
 
   const handleSubmit = (e) =>{
     e.preventDefault()
-    console.log(formData)
+    // console.log(formData)
 
     axiosInstance.post('user/register/', {
       email: formData.email,
@@ -60,8 +60,8 @@ export default function SignUp(){
       password: formData.password
     }).then((res) =>{
       navigate('/login')
-      console.log(res)
-      console.log(res.data)
+      // console.log(res)
+      // console.log(res.data)
     })
   }
 
