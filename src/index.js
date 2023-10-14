@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import App from './App';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Login from './components/Login';
 import Register from './components/Register';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
@@ -15,6 +16,7 @@ const routing = (
 			<Routes>
 				<Route exact path="/" element={<App />} />
 				<Route exact path="/register" element={<Register />} />
+				<Route exact path='/login' element={<Login />} />
 			</Routes>
 			<Footer />
 	  </Router>

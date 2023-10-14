@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function SignIn() {
+const Login = () => {
 	const navigate = useNavigate();
 	const initialFormData = Object.freeze({
 		email: '',
@@ -104,3 +104,5 @@ export default function SignIn() {
 		</Container>
 	);
 }
+
+export default Login
