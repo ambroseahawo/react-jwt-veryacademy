@@ -42,7 +42,7 @@ axiosInstance.interceptors.response.use((response) => {
       // console.log(tokenParts.exp)
 
       if (tokenParts.exp > now) {
-        return axiosInstance.post('/token/refresh', {refresh: refreshToken}).then((response) =>{
+        return axiosInstance.post('token/refresh', {refresh: refreshToken}).then((response) =>{
           localStorage.setItem('access_token', response.data.access)
           localStorage.setItem('refresh_token', response.data.refresh)
 
