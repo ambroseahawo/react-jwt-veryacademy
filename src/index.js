@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
+import Logout from './components/Logout';
 
 const routing = (
 	<React.StrictMode>
@@ -17,6 +18,7 @@ const routing = (
 				<Route exact path="/" element={<App />} />
 				<Route exact path="/register" element={<Register />} />
 				<Route exact path='/login' element={<Login />} />
+				<Route exact path='/logout' element={<Logout />} />
 			</Routes>
 			<Footer />
 	  </Router>
